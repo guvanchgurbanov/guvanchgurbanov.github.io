@@ -1,0 +1,135 @@
+/* Footer.module.css */
+.footer {
+	background: #1d1d1d;
+	padding-top: 12rem;
+	padding-bottom: 8.5rem;
+}
+
+.footer__article {
+	padding: 0 2rem 2rem 2rem;
+	border-bottom: 1px solid #393939;
+	position: relative;
+}
+
+.footer__heading {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.8rem;
+}
+
+.footer__toggler-container {
+	background-color: #393939 !important;
+	width: 45px !important;
+	height: 45px !important;
+	margin-top: -5px !important;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.footer__toggler {
+	width: 35px;
+	height: 35px;
+	transform: rotate(-90deg);
+	transition: transform 0.3s;
+}
+
+:global(.collapsible--expanded) .footer__toggler {
+	transform: rotate(0);
+}
+
+.footer__article :global(.list) {
+	font-size: 1.6rem;
+	margin: 0;
+	width: 100%;
+}
+
+.footer__article :global(.list) li {
+	padding: 0.4rem 0;
+}
+
+.footer a {
+	color: #777;
+	transition: color 0.3s;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+}
+
+.footer a:hover {
+	color: #fff;
+}
+
+.footer__brand {
+	padding: 2rem 2rem 2rem 2rem;
+	text-align: center;
+}
+
+.footer__logo {
+	width: 90%;
+	max-height: 200px;
+	max-width: 200px;
+	border-radius: 50%;
+}
+
+.footer__copyright {
+	font-size: 1.6rem;
+	color: #777;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0.3rem 0;
+}
+
+@media screen and (min-width: 300px) {
+	.footer__copyright {
+		font-size: 2.1rem;
+	}
+	.footer__article :global(.list) {
+		font-size: 2.1rem;
+	}
+	.footer__heading {
+		font-size: 2.4rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer__articles {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.footer__toggler-container {
+		display: none !important;
+	}
+
+	.footer__article :global(.collapsible__content) {
+		opacity: 1;
+		max-height: 100%;
+	}
+
+	.footer__brand {
+		order: -1;
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	.footer__logo {
+		max-height: 100px;
+		max-width: 100px;
+	}
+
+	.footer__copyright {
+		font-size: 1.7rem;
+	}
+
+	.footer__article {
+		border: 0;
+	}
+
+	.footer__article :global(.list) {
+		font-size: 1.7rem;
+	}
+
+	.footer__heading {
+		font-size: 2.2rem;
+	}
+}
